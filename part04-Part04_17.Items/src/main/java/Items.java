@@ -10,5 +10,18 @@ public class Items {
         ArrayList<Item> items = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
+        while (true){
+            System.out.print("Name: ");
+            String name = scanner.nextLine();
+            if(name.equals("")){
+                break;
+            }
+            Item i = new Item(name);
+            items.add(i); 
+        }
+        for (Item item: items){
+            System.out.println(item);
+        }  
+
     }
 }
